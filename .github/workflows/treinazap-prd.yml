@@ -16,3 +16,5 @@ jobs:
           node-version: 12.21.0
       - name: Install e build
         run: npm install && npm run build
+        env:
+            CI: false
