@@ -4,11 +4,7 @@
 name: DEPLOY NO S3
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,6 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
-      - run: npm ci
-      - run: npm test
+          node-version: 12.21.0
+      - name: Install e build
+        run: npm install && npm run build
+      - name: npm test
