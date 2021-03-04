@@ -18,4 +18,4 @@ jobs:
         env:
             CI: false
       - name: Deploy AWS
-        run: cd build && AWS_ACCESS_KEY_ID=AKIASH2OFMASBRQNK23D AWS_SECRET_ACCESS_KEY=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 aws s3 sync . s3//frstbckt --acl public-read --delete
+        run: cd build && AWS_ACCESS_KEY_ID=AKIASH2OFMASBRQNK23D AWS_SECRET_ACCESS_KEY=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 aws s3 sync . s3://frstbckt --acl public-read --delete
