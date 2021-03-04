@@ -16,6 +16,6 @@ jobs:
       - name: Install e build
         run: npm install && npm run build
         env:
-            CI: false
+            CI: "false"
       - name: Deploy AWS
-        run: cd build && AWS_ACCESS_KEY_ID=AKIASH2OFMASBRQNK23D AWS_SECRET_ACCESS_KEY=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 aws s3 sync . s3://frstbckt --acl public-read --delete
+        run: cd build && AWS_ACCESS_KEY_ID=AKIASH2OFMASGHXRUPWA AWS_SECRET_ACCESS_KEY=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 aws s3 sync . s3://frstbckt --acl public-read --delete
